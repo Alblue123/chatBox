@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="500.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ChatGPTController">
+    <children>
+        <VBox prefHeight="500.0" prefWidth="378.0">
+         <HBox fx:id="userHeader" spacing="10.0">
+            <children>
+               <ImageView fitHeight="41.0" fitWidth="67.0">
+                  <image>
+                     <Image url="@../img/hutao.png" />
+                  </image>
+               </ImageView>
+               <VBox prefHeight="41.0" prefWidth="162.0">
+                  <children>
+                     <Label text="User Name" />
+                     <Label text="Online" />
+                  </children>
+               </VBox>
+               <HBox spacing="10.0">
+                  <children>
+                     <Button fx:id="phoneCallButton">
+                        <graphic>
+                           <ImageView>
+                              <image>
+                                 <Image url="@../img/phone.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>
+                     <Button fx:id="cameraButton">
+                        <graphic>
+                           <ImageView fitHeight="32.0" fitWidth="32.0">
+                              <image>
+                                 <Image url="@../img/camera.png" />
+                              </image>
+                           </ImageView>
+                        </graphic>
+                     </Button>
+                  </children>
+               </HBox>
+            </children>
+         </HBox>
+            <ScrollPane fx:id="scrollPane" prefHeight="350.0" prefWidth="526.0" vbarPolicy="ALWAYS">
+                <content>
+                    <VBox fx:id="chatBox" prefHeight="345.0" prefWidth="378.0" styleClass="gpt-message" stylesheets="@../css/chat.css" />
+                </content>
+            </ScrollPane>
+         <HBox prefHeight="117.0" prefWidth="378.0">
+            <children>
+               <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="52.0">
+                  <graphic>
+                     <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../img/photo.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+                  <TextField fx:id="inputField" onAction="#handleUserMessage" prefHeight="41.0" prefWidth="279.0" promptText="Please enter your text" styleClass="user-message" stylesheets="@../css/chat.css" />
+               <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="52.0">
+                  <graphic>
+                     <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../img/micro.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </children>
+         </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

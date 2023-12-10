@@ -1,0 +1,16 @@
+User: Hi
+GPT: Hello! How can I assist you today?
+User: how are you
+GPT: As an AI, I do not have feelings, but I am here to assist you. How may I help you today?
+User: Hi
+GPT: Hello! How can I assist you today?
+User: Hi
+GPT: Hello! How can I assist you today?
+User: hi
+GPT: Hello! How can I help you today?
+User: hi
+GPT: Hello! How can I assist you today?
+User: hi
+GPT: Hello! How can I assist you today?
+User: hi
+GPT: Hello! How can I assist you today?

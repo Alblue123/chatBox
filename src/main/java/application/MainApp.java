@@ -1,6 +1,5 @@
 package application;
 
-import application.controller.ChatUIController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,10 +13,10 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) throws IOException {
         primaryStage.setTitle("Messenger");
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Chat.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/gpt.fxml"));
         Parent root = loader.load();
 
-        Scene scene = new Scene(root, 600, 400);
+        Scene scene = new Scene(root, 373, 500);
         primaryStage.setScene(scene);
 
         primaryStage.show();
