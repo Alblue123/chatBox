@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -12,13 +13,16 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ChatGPTController">
+<AnchorPane prefHeight="482.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ChatGPTController">
     <children>
-        <VBox prefHeight="500.0" prefWidth="378.0">
-         <HBox fx:id="userHeader" prefHeight="39.0" prefWidth="378.0" spacing="10.0">
+        <VBox prefHeight="482.0" prefWidth="378.0">
+         <HBox fx:id="userHeader" prefHeight="50.0" prefWidth="378.0" spacing="30.0" style="-fx-background-color: #8A2BE2;">
             <children>
-               <Circle fx:id="profilePic" fill="#d33232" radius="20" />
-               <VBox prefHeight="41.0" prefWidth="162.0">
+               <Circle fx:id="profilePic" fill="#d33232" radius="20.0">
+                  <HBox.margin>
+                     <Insets left="15.0" right="5.0" top="2.0" />
+                  </HBox.margin></Circle>
+               <VBox prefHeight="42.0" prefWidth="150.0">
                   <children>
                      <Label text="User Name">
                         <font>
@@ -31,6 +35,9 @@
                         </font>
                      </Label>
                   </children>
+                  <HBox.margin>
+                     <Insets top="4.0" />
+                  </HBox.margin>
                </VBox>
                <HBox spacing="10.0">
                   <children>
@@ -42,6 +49,12 @@
                               </image>
                            </ImageView>
                         </graphic>
+                        <padding>
+                           <Insets bottom="1.0" top="1.0" />
+                        </padding>
+                        <HBox.margin>
+                           <Insets top="2.0" />
+                        </HBox.margin>
                      </Button>
                      <Button fx:id="cameraButton" styleClass="rounded-button" stylesheets="@../css/chat.css">
                         <graphic>
@@ -51,8 +64,14 @@
                               </image>
                            </ImageView>
                         </graphic>
+                        <HBox.margin>
+                           <Insets top="2.0" />
+                        </HBox.margin>
                      </Button>
                   </children>
+                  <HBox.margin>
+                     <Insets top="1.0" />
+                  </HBox.margin>
                </HBox>
             </children>
          </HBox>
@@ -61,7 +80,7 @@
                     <VBox fx:id="chatBox" prefHeight="345.0" prefWidth="378.0" styleClass="gpt-message" stylesheets="@../css/chat.css" />
                 </content>
             </ScrollPane>
-         <HBox prefHeight="117.0" prefWidth="378.0" spacing="10.0">
+         <HBox prefHeight="85.0" prefWidth="378.0" spacing="10.0" style="-fx-background-color: #8A2BE2;">
             <children>
                <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="52.0" styleClass="rounded-button" stylesheets="@../css/chat.css">
                   <graphic>
@@ -71,8 +90,14 @@
                         </image>
                      </ImageView>
                   </graphic>
+                  <HBox.margin>
+                     <Insets left="3.0" top="10.0" />
+                  </HBox.margin>
                </Button>
-                  <TextField fx:id="inputField" onAction="#handleUserMessage" prefHeight="41.0" prefWidth="274.0" promptText="Please enter your text" styleClass="user-message" stylesheets="@../css/chat.css" />
+                  <TextField fx:id="inputField" onAction="#handleUserMessage" prefHeight="41.0" prefWidth="274.0" promptText="Please enter your text" styleClass="user-message" stylesheets="@../css/chat.css">
+                  <HBox.margin>
+                     <Insets top="10.0" />
+                  </HBox.margin></TextField>
                <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="52.0" styleClass="rounded-button" stylesheets="@../css/chat.css">
                   <graphic>
                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
@@ -81,6 +106,9 @@
                         </image>
                      </ImageView>
                   </graphic>
+                  <HBox.margin>
+                     <Insets right="3.0" top="10.0" />
+                  </HBox.margin>
                </Button>
             </children>
          </HBox>

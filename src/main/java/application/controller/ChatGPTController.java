@@ -22,7 +22,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class ChatGPTController {
+public class ChatGPTController implements Initializable {
     @FXML
     private VBox chatBox;
     @FXML
@@ -32,6 +32,7 @@ public class ChatGPTController {
     private ScrollPane scrollPane;
     private static final int MAX_PROMPTS = 5;
     private int promptCount = 0;
+
     public void handleUserMessage(ActionEvent event) {
         promptCount++;
         String promptCountText = promptCount + "/" + MAX_PROMPTS;
@@ -83,5 +84,11 @@ public class ChatGPTController {
 
         // Start the task in a new thread
         new Thread(gptTask).start();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
     }
 }

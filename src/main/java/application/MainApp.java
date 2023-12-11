@@ -17,7 +17,7 @@ public class MainApp extends Application {
                 .getResource("/fxml/gpt.fxml"));
         Parent root = loader.load();
 
-        Scene scene = new Scene(root, 373, 500);
+        Scene scene = new Scene(root, 378, 482);
         primaryStage.setScene(scene);
 
         primaryStage.show();
