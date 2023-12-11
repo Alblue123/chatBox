@@ -13,7 +13,8 @@ public class MainApp extends Application {
     public void start(Stage primaryStage) throws IOException {
         primaryStage.setTitle("Messenger");
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/gpt.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass()
+                .getResource("/fxml/gpt.fxml"));
         Parent root = loader.load();
 
         Scene scene = new Scene(root, 373, 500);

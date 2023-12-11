@@ -18,3 +18,13 @@
     -fx-font-size: 16px;
     -fx-font-family: "SansSerif";
 }
+
+.rounded-button {
+    -fx-background-radius: 15;
+    -fx-padding: 5px;
+}
+
+.rounded-image {
+    -fx-background-radius: 15;
+    -fx-clip: true;
+}

@@ -9,26 +9,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="500.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ChatGPTController">
     <children>
         <VBox prefHeight="500.0" prefWidth="378.0">
-         <HBox fx:id="userHeader" spacing="10.0">
+         <HBox fx:id="userHeader" prefHeight="39.0" prefWidth="378.0" spacing="10.0">
             <children>
-               <ImageView fitHeight="41.0" fitWidth="67.0">
-                  <image>
-                     <Image url="@../img/hutao.png" />
-                  </image>
-               </ImageView>
+               <Circle fx:id="profilePic" fill="#d33232" radius="20" />
                <VBox prefHeight="41.0" prefWidth="162.0">
                   <children>
-                     <Label text="User Name" />
-                     <Label text="Online" />
+                     <Label text="User Name">
+                        <font>
+                           <Font name="SansSerif Bold" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="Online">
+                        <font>
+                           <Font name="SansSerif Bold" size="14.0" />
+                        </font>
+                     </Label>
                   </children>
                </VBox>
                <HBox spacing="10.0">
                   <children>
-                     <Button fx:id="phoneCallButton">
+                     <Button fx:id="phoneCallButton" styleClass="rounded-button" stylesheets="@../css/chat.css">
                         <graphic>
                            <ImageView>
                               <image>
@@ -37,7 +43,7 @@
                            </ImageView>
                         </graphic>
                      </Button>
-                     <Button fx:id="cameraButton">
+                     <Button fx:id="cameraButton" styleClass="rounded-button" stylesheets="@../css/chat.css">
                         <graphic>
                            <ImageView fitHeight="32.0" fitWidth="32.0">
                               <image>
@@ -50,14 +56,14 @@
                </HBox>
             </children>
          </HBox>
-            <ScrollPane fx:id="scrollPane" prefHeight="350.0" prefWidth="526.0" vbarPolicy="ALWAYS">
+            <ScrollPane fx:id="scrollPane" prefHeight="348.0" prefWidth="378.0" vbarPolicy="ALWAYS">
                 <content>
                     <VBox fx:id="chatBox" prefHeight="345.0" prefWidth="378.0" styleClass="gpt-message" stylesheets="@../css/chat.css" />
                 </content>
             </ScrollPane>
-         <HBox prefHeight="117.0" prefWidth="378.0">
+         <HBox prefHeight="117.0" prefWidth="378.0" spacing="10.0">
             <children>
-               <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="52.0">
+               <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="52.0" styleClass="rounded-button" stylesheets="@../css/chat.css">
                   <graphic>
                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                         <image>
@@ -66,8 +72,8 @@
                      </ImageView>
                   </graphic>
                </Button>
-                  <TextField fx:id="inputField" onAction="#handleUserMessage" prefHeight="41.0" prefWidth="279.0" promptText="Please enter your text" styleClass="user-message" stylesheets="@../css/chat.css" />
-               <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="52.0">
+                  <TextField fx:id="inputField" onAction="#handleUserMessage" prefHeight="41.0" prefWidth="274.0" promptText="Please enter your text" styleClass="user-message" stylesheets="@../css/chat.css" />
+               <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="52.0" styleClass="rounded-button" stylesheets="@../css/chat.css">
                   <graphic>
                      <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                         <image>

@@ -8,8 +8,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 
 
 import java.io.BufferedWriter;
@@ -24,6 +27,7 @@ public class ChatGPTController {
     private VBox chatBox;
     @FXML
     private TextField inputField;
+
     @FXML
     private ScrollPane scrollPane;
     private static final int MAX_PROMPTS = 5;
